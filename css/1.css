@@ -1,0 +1,84 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*FONTS*/
+@font-face{
+	src: url('../fonts/Lato/Lato-Light.ttf');
+	font-family: lato light;
+}
+
+@font-face{
+	src: url('../fonts/Lato/Lato-Black.ttf');
+	font-family: lato black;
+}
+
+
+body, html{
+	height: 100%;
+	width: 100%;
+}
+.top{
+	background: url('../images/bg_top.jpg') ;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	color:white;
+	display: table;
+}
+
+.top .content{
+	display: table-cell;
+	vertical-align: middle;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.top .content .small-text{
+	font-family: lato light;
+	font-size:16px;
+}
+
+.top .content .large-text{
+	font-family: lato black;
+	font-weight: 800;
+	font-size: 54px;
+	margin: 0; padding: 0;
+}
+
+.top .top-button{
+	font-family: lato light;
+	color:white;
+	font-weight: 300;
+	padding: 15px 40px;
+	border: 1px solid white;
+	border-radius: 2px;
+	margin-top: 60px;
+	text-transform: uppercase;
+}
+
+.top .top-button:hover{
+	background: none;
+}
+
+/*MOBILE*/
+@media (max-width: 576px){
+	*{}
+
+.top{
+	background: url('https://i.pinimg.com/originals/aa/a6/29/aaa629f9da15fed033c5bcaf8ec89b68.jpg');
+}
+
+.top .content .small-text {
+    font-size: 12px;
+    font-weight:  100;
+    padding:  0 44px;
+}
+
+.top .top-button {
+    font-size: 15px;
+    padding: 10px 20px;
+    margin-top: 15px;
+}
+}
