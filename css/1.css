@@ -14,6 +14,15 @@
 	font-family: lato black;
 }
 
+@font-face{
+	src: url('../fonts/Lato/Lato-Regular.ttf');
+	font-family: lato regular;
+}
+
+@font-face{
+	src: url('../fonts/Lato/Lato-Bold.ttf');
+	font-family: lato bold;
+}
 
 body, html{
 	height: 100%;
@@ -62,10 +71,87 @@ body, html{
 	background: none;
 }
 
+.top-menu{
+	animation: show-and-godown 1s forwards;
+}
+
+/*CSS for CONTACT*/
+
+/*css for menu*/
+ul.right-menu li.nav-item a.nav-link{
+	font-family: "lato regular", sans-serif;
+	color:#a1b1bc;
+	font-size: 16px;
+	padding: 2px 24px;
+}
+
+.right-menu li.nav-item a.nav-link:hover{color: #1abc9c}
+
+.right-menu li.nav-item.active a.nav-link{color: #1abc9c}
+/* end css for menu*/
+
+/*CSS for contact-info block*/
+.contact-info{
+	background: url('../images/bg_contact_02.png');
+	background-size: cover;
+	height: 600px;
+
+	opacity: 0;
+	animation: show 1s forwards;
+	animation-delay: 0.5s;
+}
+
+.contact-info .info{
+	margin-top: 190px;
+	background-color: #435566;
+	border-left: 3px solid #16caaa;
+	color: white;
+	padding: 33px 40px;
+
+	opacity: 0;
+	animation: show-and-slide 1.5s forwards;
+	animation-delay: 1s;
+}
+
+.info h1{
+	font-family: "lato bold";
+	font-size: 36px;
+	margin-bottom: 23px;
+}
+
+.info .col-sm-6{
+	font-size: 14px;
+	font-family: "lato regular";
+	line-height: 24px;
+}
+
+.info ul{
+	list-style: none;
+}
+
+.info i{
+	padding-right: 9px;
+}
+
+	/*EFFECTS*/
+@keyframes show-and-slide{
+	from{opacity: 0; transform: translateX(-300px);}
+	to{opacity: 1; transform: translateX(0px);}
+}
+@keyframes show-and-godown{
+	from{opacity:0; transform: translateY(-300px);}
+	to{opacity:1; transform: translateY(0px);}
+}
+@keyframes show{
+	from{opacity:0;}
+	to{opacity:1;}
+}
+
+/*end CSS for contact-info block*/
+
 /*MOBILE*/
 @media (max-width: 576px){
 	*{}
-
 .top{
 	background: url('https://i.pinimg.com/originals/aa/a6/29/aaa629f9da15fed033c5bcaf8ec89b68.jpg');
 }
@@ -81,4 +167,29 @@ body, html{
     padding: 10px 20px;
     margin-top: 15px;
 }
+
+/*css for menu*/
+ul.right-menu li.nav-item a.nav-link{
+	font-size: 19px;
+	padding: 9px 24px;
+	border-bottom: 1px dashed gray;
+	text-align:  center;
+	text-transform:  uppercase;
+}
+.navbar-brand {
+	text-align: center;
+	margin: 0 30%;
+}
+
+.navbar-brand img {
+    height: 95px;
+    margin-top: -17px;
+}
+
+.right-menu li.nav-item a.nav-link:hover{color: #1abc9c;background: #ebe8e8;}
+
+.right-menu li.nav-item.active a.nav-link{color: #1abc9c}
+/* end css for menu*/
+
+
 }
